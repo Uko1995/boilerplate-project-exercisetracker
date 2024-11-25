@@ -6,7 +6,7 @@ mongoose.connect(process.env.MONGO_URI);
 const exerciseSchema = new mongoose.Schema({
     description: {type: String, required: true},
     duration: {type: String, required: true},
-    date: String
+    date: {type: Date, default: Date.now}
 })
 
 const Schema = new mongoose.Schema({
