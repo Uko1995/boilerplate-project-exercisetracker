@@ -116,7 +116,7 @@ app.get('/api/users/:_id/logs', async (req, res) => {
       log: user.exercises.map(exercise => ({
         description: exercise.description,
         duration: parseInt(exercise.duration),
-        date: exercise.date
+        date: exercise.date.toDateString()
       }))
     });
   } catch (error) {
